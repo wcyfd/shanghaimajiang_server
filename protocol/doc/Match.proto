@@ -1,0 +1,11 @@
+package com.randioo.shanghaimajiang_server.protocol;
+
+import "Entity.proto";
+
+message MatchNewGameRequest{
+	optional NewGameConfigData NewGameConfigData = 1;
+}
+
+message MatchNewGameResponse{
+	optional int32 errorCode = 1[default = 1];
+}

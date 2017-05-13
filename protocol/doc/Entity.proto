@@ -1,0 +1,26 @@
+package com.randioo.shanghaimajiang_server.protocol;
+
+message RoleData{
+	optional int32 roleId = 1;
+	optional string name =2;
+}
+
+message NewGameConfigData{
+	optional int32 round =1;
+	optional bool bySelfy = 2;
+	optional bool laizi = 3;
+	optional bool useDouble = 4;
+	optional int32 targetRound = 5;
+	optional GameType gameType = 6;
+	optional bool leizi = 7;
+	optional bool huangfan = 8;
+	optional int32 di = 9;
+	optional bool fly = 10;
+}
+
+enum GameType{
+	GAME_TYPE_YINSANZUI = 0;
+	GAME_TYPE_KOUDIAN = 1;
+	GAME_TYPE_QIAOMA = 2;
+	GAME_TYPE_QINGHUNPENG = 3;
+}
