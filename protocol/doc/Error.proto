@@ -21,5 +21,14 @@ enum ErrorCode{
 	NAME_REPEATED = 11;//名字重复
 	NAME_TOO_LONG = 12;//名字过长
 	NAME_SPECIAL_CHAR = 13;//名字特殊字符
+
 	
-} // 13
+	//玩家
+	NO_MONEY = 14;//没有钱
+
+
+	//匹配
+	GAME_CREATE_ERROR = 15;//创建游戏失败
+	GAME_JOIN_ERROR = 16;//加入游戏失败
+	
+} // 16

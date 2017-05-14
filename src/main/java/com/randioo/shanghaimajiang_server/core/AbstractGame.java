@@ -1,5 +1,7 @@
 package com.randioo.shanghaimajiang_server.core;
 
+import com.randioo.randioo_server_base.entity.RoleInterface;
+
 public abstract class AbstractGame {
 	private int gameId;
 
@@ -11,8 +13,8 @@ public abstract class AbstractGame {
 		this.gameId = gameId;
 	}
 
-	public abstract int getGameType();
+	public abstract void initGame(Object config);
 
-	public abstract void initGame(Object gameConfigInterface);
+	public abstract void joinGame(RoleInterface role);
 
 }

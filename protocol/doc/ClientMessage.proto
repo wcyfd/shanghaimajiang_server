@@ -2,6 +2,7 @@ package com.randioo.shanghaimajiang_server.protocol;
 import "Login.proto";
 import "Role.proto";
 import "Match.proto";
+import "Fight.proto";
 
 message CS{
 	optional LoginCheckAccountRequest LoginCheckAccountRequest = 1;
@@ -11,4 +12,7 @@ message CS{
 	optional RoleRenameRequest RoleRenameRequest = 4;
 
 	optional MatchNewGameRequest MatchNewGameRequest = 5;
-} // 5
+	optional MatchJoinGameRequest MatchJoinGameRequest = 6;
+
+	optional FightCmdRequest FightCmdRequest = 7;
+} // 7

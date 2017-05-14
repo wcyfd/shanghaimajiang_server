@@ -2,6 +2,7 @@ package com.randioo.shanghaimajiang_server.protocol;
 import "Login.proto";
 import "Role.proto";
 import "Match.proto";
+import "Fight.proto";
 
 message SC{
 	optional LoginCheckAccountResponse LoginCheckAccountResponse = 1;
@@ -11,4 +12,8 @@ message SC{
 	optional RoleRenameResponse RoleRenameResponse = 4;
 
 	optional MatchNewGameResponse MatchNewGameResponse = 5;
-} // 5
+	optional MatchJoinGameResponse MatchJoinGameResponse = 6;
+
+	optional FightCmdResponse FightCmdResponse = 7;
+	optional SCFightWait SCFightWait = 8;
+} // 8

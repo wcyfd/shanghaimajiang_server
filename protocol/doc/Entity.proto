@@ -24,3 +24,49 @@ enum GameType{
 	GAME_TYPE_QIAOMA = 2;
 	GAME_TYPE_QINGHUNPENG = 3;
 }
+
+message GameRoleData{
+	
+}
+
+message GameData{
+	optional int32 round = 1;
+	optional GameType gameType = 2;
+}
+
+message Chi{
+	optional int32 paiId = 1;
+}
+
+message Mo{}
+
+message Gang{
+	optional int32 paiId = 1;
+	optional int32 targetRoleId = 2;
+}
+
+message Peng{
+	optional int32 targetRoleId =1;
+}
+
+message Guo{}
+
+message Ting{}
+
+message Hu{}
+
+message Hua{
+	optional int32 paiId = 1;
+}
+
+message GameActionData{
+	optional Chi chi = 1;
+	optional Mo mo = 2;
+	optional Gang gang = 3;
+	optional Peng peng = 4;
+	optional Guo guo = 5;
+	optional Ting ting = 6;
+	optional Hu hu = 7;
+	optional Hua hua = 8;
+}
+

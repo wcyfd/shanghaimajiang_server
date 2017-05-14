@@ -8,4 +8,16 @@ message MatchNewGameRequest{
 
 message MatchNewGameResponse{
 	optional int32 errorCode = 1[default = 1];
+	optional int32 gameId = 2;
+	optional GameData gameData = 3;
+}
+
+message MatchJoinGameRequest{
+	optional int32 gameId = 1;
+}
+
+message MatchJoinGameResponse{
+	optional int32 errorCode = 1[default = 1];
+	optional GameRoleData gameRoleData = 2;
+	optional GameData gameData = 3;
 }

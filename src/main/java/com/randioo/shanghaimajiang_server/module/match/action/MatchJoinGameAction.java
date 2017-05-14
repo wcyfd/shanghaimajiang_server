@@ -9,20 +9,20 @@ import com.randioo.randioo_server_base.cache.RoleCache;
 import com.randioo.randioo_server_base.net.IActionSupport;
 import com.randioo.shanghaimajiang_server.entity.bo.Role;
 import com.randioo.shanghaimajiang_server.module.match.service.MatchService;
-import com.randioo.shanghaimajiang_server.protocol.Match.MatchNewGameRequest;
+import com.randioo.shanghaimajiang_server.protocol.Match.MatchJoinGameRequest;
 import com.randioo.shanghaimajiang_server.util.SessionUtils;
 
-@PTAnnotation(MatchNewGameRequest.class)
-public class MatchNewGameAction implements IActionSupport {
+@PTAnnotation(MatchJoinGameRequest.class)
+public class MatchJoinGameAction implements IActionSupport {
 
 	@Autowired
 	private MatchService matchService;
 
 	@Override
 	public void execute(Object data, IoSession session) {
-		MatchNewGameRequest request = (MatchNewGameRequest) data;
+		MatchJoinGameRequest request = (MatchJoinGameRequest) data;
 		Role role = (Role) RoleCache.getRoleBySession(session);
-		GeneratedMessage message = matchService.newGame(role, request.getNewGameConfigData());
+		GeneratedMessage message = matchService.joinGame(role, request.getGameId());
 
 		SessionUtils.sc(session, message);
 	}

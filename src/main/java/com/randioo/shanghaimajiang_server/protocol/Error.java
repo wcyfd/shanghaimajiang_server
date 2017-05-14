@@ -23,6 +23,9 @@ public final class Error {
     NAME_REPEATED(10, 11),
     NAME_TOO_LONG(11, 12),
     NAME_SPECIAL_CHAR(12, 13),
+    NO_MONEY(13, 14),
+    GAME_CREATE_ERROR(14, 15),
+    GAME_JOIN_ERROR(15, 16),
     ;
     
     
@@ -43,6 +46,9 @@ public final class Error {
         case 11: return NAME_REPEATED;
         case 12: return NAME_TOO_LONG;
         case 13: return NAME_SPECIAL_CHAR;
+        case 14: return NO_MONEY;
+        case 15: return GAME_CREATE_ERROR;
+        case 16: return GAME_JOIN_ERROR;
         default: return null;
       }
     }
@@ -73,7 +79,7 @@ public final class Error {
     }
     
     private static final ErrorCode[] VALUES = {
-      OK, NO_STRING, NO_ROLE_ACCOUNT, EXIST_ROLE, CREATE_FAILED, REJECT_LOGIN, ACCOUNT_ILLEGEL, IN_LOGIN, NAME_SENSITIVE, NO_ROLE_DATA, NAME_REPEATED, NAME_TOO_LONG, NAME_SPECIAL_CHAR, 
+      OK, NO_STRING, NO_ROLE_ACCOUNT, EXIST_ROLE, CREATE_FAILED, REJECT_LOGIN, ACCOUNT_ILLEGEL, IN_LOGIN, NAME_SENSITIVE, NO_ROLE_DATA, NAME_REPEATED, NAME_TOO_LONG, NAME_SPECIAL_CHAR, NO_MONEY, GAME_CREATE_ERROR, GAME_JOIN_ERROR, 
     };
     public static ErrorCode valueOf(
         com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
@@ -107,13 +113,15 @@ public final class Error {
   static {
     java.lang.String[] descriptorData = {
       "\n\013Error.proto\022+com.randioo.shanghaimajia" +
-      "ng_server.protocol*\362\001\n\tErrorCode\022\006\n\002OK\020\001" +
+      "ng_server.protocol*\254\002\n\tErrorCode\022\006\n\002OK\020\001" +
       "\022\r\n\tNO_STRING\020\002\022\023\n\017NO_ROLE_ACCOUNT\020\003\022\016\n\n" +
       "EXIST_ROLE\020\004\022\021\n\rCREATE_FAILED\020\005\022\020\n\014REJEC" +
       "T_LOGIN\020\006\022\023\n\017ACCOUNT_ILLEGEL\020\007\022\014\n\010IN_LOG" +
       "IN\020\010\022\022\n\016NAME_SENSITIVE\020\t\022\020\n\014NO_ROLE_DATA" +
       "\020\n\022\021\n\rNAME_REPEATED\020\013\022\021\n\rNAME_TOO_LONG\020\014" +
-      "\022\025\n\021NAME_SPECIAL_CHAR\020\r"
+      "\022\025\n\021NAME_SPECIAL_CHAR\020\r\022\014\n\010NO_MONEY\020\016\022\025\n" +
+      "\021GAME_CREATE_ERROR\020\017\022\023\n\017GAME_JOIN_ERROR\020" +
+      "\020"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {

@@ -1,9 +1,11 @@
 package com.randioo.shanghaimajiang_server.core.majiang.qiaoma;
 
-import com.randioo.shanghaimajiang_server.core.AbstractGame;
+import com.randioo.randioo_server_base.entity.RoleInterface;
+import com.randioo.shanghaimajiang_server.core.majiang.MajiangGame;
+import com.randioo.shanghaimajiang_server.entity.bo.Role;
 import com.randioo.shanghaimajiang_server.protocol.Entity.GameType;
 
-public class QiaoMaGame extends AbstractGame {
+public class QiaoMaGame extends MajiangGame {
 
 	@Override
 	public int getGameType() {
@@ -12,6 +14,12 @@ public class QiaoMaGame extends AbstractGame {
 
 	@Override
 	public void initGame(Object gameConfigInterface) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void joinGame(RoleInterface role) {
 		// TODO Auto-generated method stub
 
 	}
